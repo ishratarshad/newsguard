@@ -1,11 +1,11 @@
-# NewsGuard 🛡️  
+# NewsGuard  
 AI-Powered Scam Article Detector using NLP & Machine Learning.  
 
-## 📌 Project Overview  
+## Project Overview  
 NewsGuard is an AI system designed to detect fake news and scam articles using machine learning.  
 
-## 📂 Folder Structure  
-📂 newsguard-1/
+## Folder Structure  
+newsguard-1/
 │── datasets/ # Store raw and cleaned datasets
 │── analysis/ # Store EDA reports and visualizations
 │── docs/ # Store project documentation
