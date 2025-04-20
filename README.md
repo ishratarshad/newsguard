@@ -1,32 +1,59 @@
 # NewsGuard  
-AI-Powered Scam Article Detector using NLP & Machine Learning.  
+**AI-Powered Scam Article Detector using NLP & Machine Learning**
+
+---
 
 ## Project Overview  
-NewsGuard is an AI system designed to detect fake news and scam articles using machine learning.  
+NewsGuard is a machine learning system built to detect fake or misleading news articles. By leveraging Natural Language Processing (NLP), it classifies text as **Legitimate** or **Fake News**, providing a confidence score and an explanation using LIME.
+
+---
 
 ## Folder Structure  
-newsguard-1/
-│── datasets/ # Store raw and cleaned datasets
+```
+newsguard/
+│
+├── datasets/           # Raw and cleaned data files
+├── analysis/           # EDA reports and data visualizations
+├── docs/               # Documentation, test results, and API usage
+├── scripts/            # Python scripts (training, testing, LIME, etc.)
+├── model/              # Saved models, vectorizers, and features
+├── api/                # Flask API implementation
+├── ui/                 # (Optional) React front-end for user interaction
+│
+├── README.md           # Project overview and instructions
+├── requirements.txt    # Required Python libraries
+├── .gitignore          # Files/directories to ignore in version control
+```
 
+---
 
-│── analysis/ # Store EDA reports and visualizations
+## Features  
+- **Fake News Classifier** using Naive Bayes & TF-IDF  
+- **REST API** with `/predict` and `/explain` routes  
+- **LIME Explainability** for interpretable results  
+- Confidence score for predictions  
+- Clean documentation and test logs  
+- Tested with Postman + documented test outputs
 
+---
 
-│── docs/ # Store project documentation
+## Tech Stack  
+- **Python** (NLP & API)  
+- **Scikit-learn**, **LIME**, **Pandas**  
+- **Flask** (Backend API)  
+- **Postman** (API testing)  
+- (Optional) **React.js** (Front-End)
 
+---
 
-│── scripts/ # Python scripts for cleaning and preprocessing
+## Project Lead  
+**Ishrat Arshad** – Project Tech Lead  
 
+## Project Members
+**Rayat Chowdhury** 
+**Elhadji Keita**
+**Gael Arellano**
+**Fahid Ahmed**
+**Zejd Avdovic**
+---
 
-│── model/ # Trained models & experiments
-
-
-│── api/ # Flask/FastAPI backend
-
-
-│── ui/ # (If time allows) React front-end
-
-
-│── README.md # Project overview
-│── requirements.txt # Required libraries
-│── .gitignore # Files to ignore
