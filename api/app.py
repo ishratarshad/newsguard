@@ -1,11 +1,15 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 import joblib
 from lime.lime_text import LimeTextExplainer
 import numpy as np
 
 # Load vectorizer and model
-vectorizer = joblib.load("model/vectorizer.pkl")
-model = joblib.load("model/scam_detector.pkl")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+vectorizer = joblib.load(os.path.join(BASE_DIR, "model", "vectorizer.pkl"))
+model = joblib.load(os.path.join(BASE_DIR, "model", "scam_detector.pkl"))
 
 # Model outputs "Real" or "Fake", we map them to nicer labels
 label_mapping = {
@@ -18,6 +22,9 @@ class_names = ["Legitimate", "Fake News"]
 
 # Initialize Flask app
 app = Flask(__name__)
+from flask_cors import CORS
+CORS(app)
+
 
 @app.route('/')
 def home():

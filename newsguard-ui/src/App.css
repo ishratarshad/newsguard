@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 183, 255, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0284c7;
+}
+
+button:disabled {
+  background-color: #334155;
+  cursor: not-allowed;
+}
+
+.clear-btn {
+  background-color: #64748b;
+}
+
+.clear-btn:hover {
+  background-color: #475569;
+}
+
+.result {
+  margin-top: 2rem;
+  background-color: #0f172a;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.result h2,
+.result h3 {
+  color: #7dd3fc;
+}
+
+.result p {
+  margin: 0.5rem 0;
+}
+
+/* Special styling for strong elements in .result */
+.result p strong {
+  color: #93c5fd;
+}
+
+/* Specific styling for Misinformation Assessment line */
+.assessment-line {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #facc15; /* amber-400 for standout note */
+}
+
+.highlighted-text {
+  margin-top: 1rem;
+  line-height: 1.6;
+  background-color: #1e293b;
+  padding: 1rem;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+}
+
+mark {
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: help;
+  transition: background-color 0.3s ease;
+}
+
+/* Legend styles */
+.legend {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.legend-box.red {
+  background-color: #ff3c3c;
+}
+
+.legend-box.blue {
+  background-color: #3399ff;
+}
+
+.legend-box.gray {
+  background-color: #eeeeee;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
