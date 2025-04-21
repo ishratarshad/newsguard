@@ -31,8 +31,8 @@ def predict():
 
     text = data['text']
     X = vectorizer.transform([text])
-    label = model.predict(X)[0]  # returns "Real" or "Fake"
-    proba = float(np.max(model.predict_proba(X)[0]))  # max confidence
+    label = model.predict(X)[0]
+    proba = float(np.max(model.predict_proba(X)[0]))
 
     return jsonify({
         "prediction": label_mapping.get(label, "Unknown"),
@@ -47,17 +47,28 @@ def explain():
 
     text = data['text']
 
+    # Define prediction function for LIME
     def predict_proba(texts):
-        X = vectorizer.transform(texts)
-        return model.predict_proba(X)
+        return model.predict_proba(vectorizer.transform(list(texts)))
 
+    # Run LIME
     explainer = LimeTextExplainer(class_names=class_names)
-    explanation = explainer.explain_instance(text, predict_proba, num_features=5)
+    explanation = explainer.explain_instance(text, predict_proba, num_features=10)
+
     label = model.predict(vectorizer.transform([text]))[0]
+    confidence = float(np.max(model.predict_proba(vectorizer.transform([text]))[0]))
+
+    # Prepare highlight data (word and weight)
+    highlights = explanation.as_list()
 
     return jsonify({
         "prediction": label_mapping.get(label, "Unknown"),
-        "explanation": explanation.as_list()
+        "confidence": round(confidence, 4),
+        "original_text": text,
+        "highlight_data": [
+            {"word": word, "weight": round(score, 4)}
+            for word, score in highlights
+        ]
     })
 
 if __name__ == '__main__':
