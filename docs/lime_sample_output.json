@@ -1,0 +1,11 @@
+{
+  "input_text": "Shocking miracle cure discovered today!",
+  "prediction": "Legitimate",
+  "explanation": [
+    ["miracle", 0.31440751885486257],
+    ["today", -0.03014318236909909],
+    ["Shocking", -0.022394090845847116],
+    ["discovered", 0.013908091003055604],
+    ["cure", 0.0028101415231625224]
+  ]
+}
