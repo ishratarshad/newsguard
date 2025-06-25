@@ -49,7 +49,7 @@ newsguard/
 ## Project Lead  
 **Ishrat Arshad** – Project Tech Lead  
 
-## Project Members
+## Project Members:
 **Rayat Chowdhury** 
 **Elhadji Keita**
 **Gael Arellano**
