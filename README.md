@@ -42,18 +42,6 @@ newsguard/
 - **Scikit-learn**, **LIME**, **Pandas**  
 - **Flask** (Backend API)  
 - **Postman** (API testing)  
-- (Optional) **React.js** (Front-End)
 
----
 
-## Project Lead  
-**Ishrat Arshad** – Project Tech Lead  
-
-## Project Members:
-**Rayat Chowdhury** 
-**Elhadji Keita**
-**Gael Arellano**
-**Fahid Ahmed**
-**Zejd Avdovic**
----
 
