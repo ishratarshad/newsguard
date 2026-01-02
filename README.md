@@ -1,5 +1,4 @@
 # NewsGuard  
-**AI-Powered Scam Article Detector using NLP & Machine Learning**
 
 ---
 
